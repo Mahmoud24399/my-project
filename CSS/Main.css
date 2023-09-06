@@ -536,11 +536,19 @@ header nav .form i {
     padding: 30px;
     margin-bottom: 30px;
 
+
+}
+
+@media (max-width: 991px) {
+    .portfolio .shuffle {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .portfolio .shuffle li {
-    margin: 0 15px;
-    padding: 15px;
+    margin-left: 15px;
+    padding: 10px;
 
 }
 
@@ -565,6 +573,27 @@ header nav .form i {
     overflow: hidden;
 
 
+
+}
+
+@media (max-width: 767px) {
+    .portfolio .portfolio-content .port-box {
+        flex-basis: 100%;
+
+    }
+}
+
+@media (min-width: 767px) {
+    .portfolio .portfolio-content .port-box {
+        flex-basis: 50%;
+    }
+
+}
+
+@media (min-width: 991px) {
+    .portfolio .portfolio-content .port-box {
+        flex-basis: 25%;
+    }
 
 }
 
@@ -1090,8 +1119,33 @@ button {
 
 .pricing .container .plan .head h4 {
     font-size: 55px;
+    display: inline-block;
     margin: 10px auto 30px;
+    position: relative;
 }
+
+.pricing .container .plan .head h4::before {
+    content: '$';
+    font-weight: normal;
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    top: -11px;
+    left: -20px;
+
+}
+
+
+.pricing .container .plan .head h4::after {
+    content: '/mo';
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    bottom: 0;
+    right: -50px;
+    font-weight: normal;
+}
+
 
 .pricing .container .plan .head p {
     padding: 15px;
@@ -1369,15 +1423,18 @@ button {
     height: 100%;
     background-color: #3333337e;
 }
+
 .footer .container {
     position: relative;
     text-align: center;
     color: white;
 }
+
 .footer img {
     width: 300px;
     margin: 25px auto;
 }
+
 .footer h4 {
     font-weight: normal;
     font-size: 25px;
@@ -1393,9 +1450,10 @@ button {
 }
 
 .footer .social i {
-    padding: 10px 15px ;
+    padding: 10px 15px;
 
 }
+
 .footer .copy-right span {
     color: var(--main-color);
 
